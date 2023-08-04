@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Agregar Post</h1>
+    <form action="{% url 'agregar' %}" method="post">
+        {% csrf_token %}
+        <label for="title">Título:</label>
+        <input type="text" name="title">
+      
+        <label for="text">Contenido:</label>
+        <textarea name="text"></textarea>
+      
+        <label for="author">Autor:</label>
+        <input type="text" name="author">
+      
+        <input type="submit" value="Agregar">
+      </form>
+      
+      
+</body>
+</html>

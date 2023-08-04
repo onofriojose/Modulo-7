@@ -32,7 +32,7 @@ def crear_productos(request):
     return render(request, 'crear_productos.html', {'form': form})
 
 def editar_productos(request, productos_id):
-    book = get_object_or_404(Productos, id=productos_id)
+    productos = get_object_or_404(Productos, id=productos_id)
     if request.method == 'POST':
         form = ProductosForm(request.POST, instance=productos)
         if form.is_valid():
